@@ -1,0 +1,143 @@
+.team {
+  padding-top: 100px;
+  padding-bottom: 120px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, .25) 0%, rgba(0, 0, 0, .25) 100%), #1d1d1d;
+  background-blend-mode: soft-light;
+  @include adapt_to("large-phone") {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  &-title {
+    position: relative;
+    display: table;
+    margin: auto auto 85px;
+    @include adapt_to("large-phone") {
+      margin-bottom: 30px;
+    }
+    &__before,
+    &__after {
+      transition: all 0.3s ease;
+      position: absolute;
+      width: 18px;
+      height: 60px;
+      top: 0;
+      @include adapt_to('large-phone') {
+
+      }
+      &::before,
+      &::after {
+        content: '';
+        width: 17px;
+        height: 18px;
+        position: absolute;
+      }
+
+    }
+    &__before {
+      &::before {
+        border-top: 3px solid #FE710D;
+        border-left: 3px solid #FE710D;
+        top: -5px;
+        left: -20px;
+        @include adapt_to('large-phone') {
+          left: -10px;
+        }
+      }
+      &::after {
+        bottom: 0;
+        border-bottom: 3px solid #FE710D;
+        border-left: 3px solid #FE710D;
+        left: -20px;
+        @include adapt_to('large-phone') {
+          left: -10px;
+        }
+      }
+    }
+    &__after {
+      right: 0;
+      &::before {
+        border-top: 3px solid #FE710D;
+        border-right: 3px solid #FE710D;
+        top: -5px;
+        right: -20px;
+        @include adapt_to('large-phone') {
+          right: -10px;
+        }
+      }
+      &::after {
+        bottom: 0;
+        border-bottom: 3px solid #FE710D;
+        border-right: 3px solid #FE710D;
+        right: -20px;
+        @include adapt_to('large-phone') {
+          right: -10px;
+        }
+      }
+    }
+    &__typing {
+      opacity: 0;
+      font-size: 36px;
+      line-height: normal;
+      font-family: $font-exo-m;
+      @include adapt_to('desktop') {
+        font-size: 30px;
+        text-align: center;
+      }
+      @include adapt_to('large-phone') {
+        font-size: 24px;
+      }
+    }
+  }
+  &-body {
+    @extend .stretch;
+    max-width: 860px;
+    margin: auto;
+  }
+  &-item {
+    border-radius: 20px;
+    background: linear-gradient(125deg, rgba(255, 255, 255, .35) 0%, rgba(1, 3, 3, .35) 100%), #212121;
+    background-blend-mode: soft-light;
+    box-shadow: 0 5px 25px 0 rgba(140, 44, 132, 0.1);
+    position: relative;
+    margin-bottom: 25px;
+    max-width: 270px;
+    padding: 35px 25px 45px;
+    @extend .center-item;
+    text-align: center;
+    @include adapt_to('desktop') {
+      max-width: 48%;
+    }
+    @include adapt_to('large-phone') {
+      max-width: 100%;
+    }
+    &__avatar {
+      overflow: hidden;
+      width: 113px;
+      height: 117px;
+      border-radius: 13px;
+      @extend .position;
+    }
+    &__name {
+      color: #ff6000;
+      font-size: 16px;
+      line-height: 13px;
+      font-family: $font-exo-m;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      @extend .position;
+    }
+    &__position {
+      font-family: $font-exo-m;
+      font-size: 15px;
+      line-height: 13px;
+      margin-bottom: 10px;
+      @extend .position;
+    }
+    &__description {
+      font-size: 12px;
+      line-height: 18px;
+      font-family: $font-exo-l;
+      @extend .position;
+    }
+  }
+}

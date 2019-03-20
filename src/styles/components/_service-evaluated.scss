@@ -1,0 +1,19 @@
+.service-evaluated {
+  padding-top: 105px;
+  padding-bottom: 130px;
+  text-align: center;
+  h2 {
+    max-width: 480px;
+    margin: auto auto 40px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: $font-exo-l;
+    margin-bottom: 40px;
+  }
+  .default-btn {
+    padding: 24px 53px;
+    display: table;
+  }
+}

@@ -1,0 +1,21 @@
+.registration {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%,rgba(1,2,3,0.1) 100%), linear-gradient(to right, rgba(118,37,80,1) 0%,rgba(188,58,81,1) 100%);
+  background-blend-mode: soft-light;
+  padding-top: 45px;
+  padding-bottom: 140px;
+  text-align: center;
+  h4 {
+    font-family: $font-exo-l;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  &__btn {
+    &.default-btn {
+      display: table;
+      padding: 22px 39px;
+      background: #181818;
+      box-shadow: 0 10px 20px 0 rgba(24, 24, 24, 0.4);
+    }
+  }
+}

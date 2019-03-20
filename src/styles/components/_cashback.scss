@@ -1,0 +1,105 @@
+.cashback {
+  position: relative;
+  background: linear-gradient(to bottom, rgba(255,255,255,.5) 0%,rgba(29,29,29,.5) 100%), #622b86;
+  background-blend-mode: soft-light;
+  &__item {
+    padding-top: 101px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    align-items: flex-start;
+    p {
+      font-size: 18px;
+      line-height: 30px;
+      font-family: $font-exo-l;
+      margin-bottom: 25px;
+      margin-top: 20px;
+    }
+    .default-btn {
+      display: table;
+      margin: auto auto auto 0;
+    }
+    h2 {
+      text-align: left;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      &::after {
+        @extend .about-info__tagline::after;
+      }
+    }
+    &-btn {
+      font-size: 24px;
+      line-height: 36px;
+      font-family: $font-exo;
+      color: #fc5e03;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: baseline;
+      &::after {
+        @extend .about-info__registration::after;
+        background-color: #fc5e03 !important;
+      }
+      &:hover {
+        text-decoration: none;
+        color: #fc5e03;
+      }
+    }
+  }
+  &__img {
+    position: relative;
+    margin-top: 65px;
+    max-width: 373px;
+    max-height: 506px;
+  }
+  &__cash {
+    position: absolute;
+    top: -105px;
+    left: 140px;
+    width: 163px;
+    height: 163px;
+    border-radius: 50%;
+    background: #fc5e03;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: $font-exo-m;
+    span {
+      font-size: 47px;
+      line-height: 25px;
+      padding-bottom: 15px;
+    }
+  }
+}
+
+@include adapt_to('large-phone') {
+  .cashback {
+    .row {
+      flex-direction: column;
+    }
+    &__item {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    &__img {
+      margin-top: 53px;
+      position: relative;
+      z-index: 1;
+    }
+    &__cash {
+      top: -75px;
+      left: 35%;
+      width: 45%;
+      height: 40%;
+      span {
+        font-size: 40px;
+      }
+    }
+  }
+}

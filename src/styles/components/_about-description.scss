@@ -1,0 +1,96 @@
+.about {
+  &-info-top {
+    background: linear-gradient(45deg, rgba(1,2,3,0.8) 0%,rgba(255,255,255,0.8) 100%), linear-gradient(45deg, rgba(238,238,238,1) 0%,rgba(255,255,255,1) 100%);
+    background-blend-mode: soft-light;
+    color: $default;
+    padding-top: 80px;
+    overflow: hidden;
+    &__body {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 60px;
+      @include adapt_to("large-phone") {
+        margin-bottom: 30px;
+      }
+      &::before {
+        content: '';
+        width: 23px;
+        height: 5px;
+        background: $default;
+      }
+      h3 {
+        margin: 0;
+        font-size: 18px;
+        line-height: 36px;
+        font-family: $font-exo-m;
+      }
+      p {
+        font-size: 14px;
+        line-height: 24px;
+        font-family: $font-exo;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &-full-description {
+    text-align: center;
+    color: $white;
+    position: relative;
+    padding-bottom: 100px;
+    @include adapt_to('large-phone') {
+      padding-bottom: 50px;
+    }
+    .u-play-style {
+      margin-top: -46px;
+      width: 92px;
+      height: 92px;
+
+      .u-play-video-circle-rotate {
+        background-size: 68px;
+      }
+    }
+    &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .position-bg {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+      }
+      h3 {
+        margin-top: 20px;
+        font-size: 18px;
+        font-family: $font-exo-m;
+        line-height: normal;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 24px;
+        font-family: $font-exo;
+        max-width: 840px;
+        margin: auto auto 20px;
+      }
+      .blockquote {
+        position: relative;
+        font-family: $font-exo-l;
+        font-style: italic;
+        max-width: 495px;
+        display: flex;
+        margin: auto;
+        &::before {
+          content: '';
+          background: url('/img/blockquote-ico.png');
+          width: 16px;
+          height: 14px;
+          flex: 1 0 auto;
+        }
+      }
+      @include adapt_to('laptop') {
+        width: 80%;
+        margin: auto;
+      }
+    }
+  }
+}
